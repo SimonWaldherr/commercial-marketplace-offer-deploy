@@ -1,0 +1,102 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Cars API
+  description: Cars Demo API Sandbox
+servers: 
+  - url: http://localhost:3000
+tags:
+  - name: car
+    description: Everything about your Car
+    externalDocs:
+      description: Find out more
+      url: http://swagger.io
+paths:
+  /car:
+    post:
+      tags:
+        - car
+      summary: Add a new car to the garage
+      description: Add a new car to the garage
+      operationId: addCar
+      requestBody:
+        description: Create a new car in the garage
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Car'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Car'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Car'
+        required: true
+      responses:
+        '200':
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Car'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Car'
+        '405':
+          description: Invalid input
+    get:
+      tags:
+        - car
+      summary: Retrieve car information
+      description: Operation to list all car information
+      parameters:
+        - name: carname
+          in: query
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/Car'
+        default:
+          description: Unexpected Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      
+components:
+  schemas:
+    Car:
+      type: object
+      required:
+        - year
+        - make
+      properties:
+        year:
+          type: integer
+          example: 2023
+        make:
+          type: string
+          example: Honda
+        model:
+          type: string
+          example: Civic
+        color:
+          type: string
+          example: Gray
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
