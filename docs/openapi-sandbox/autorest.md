@@ -9,3 +9,8 @@ You will notice the Swagger doc UI simultaneously update based on what you input
   ```
   npm install autorest
   ```
+5. Next, we want to tell AutoRest which swagger file to generate (`--input-file=`) as well as the language we want our SDK to be generated in (`--python`, `--go`, etc). Finally, we can tell AutoRest where we want the generated files to be outputted to (`--output-folder=`)
+  ```
+  autorest --input-file=example.json --python --output-folder=myFolder/
+  ```
+ 
