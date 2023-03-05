@@ -13,8 +13,16 @@ You will notice the Swagger doc UI simultaneously update based on what you input
   ```
   autorest --input-file=example.json --python --output-folder=myFolder/
   ```
- # Resources
-OpenAPI:
+# Resources
+## OpenAPI:
+
   [OpenAPI Repository](https://github.com/OAI/OpenAPI-Specification)
   
   [Video Walkthrough on creating a Swagger Doc](https://www.youtube.com/watch?v=mViFmjcDOoA&t=382s)
+
+## AutoRest
+
+  [Main Repository](https://github.com/Azure/autorest)
+  
+  [Generating Clients with AutoRest](https://github.com/Azure/autorest/tree/main/docs/generate)
+  
