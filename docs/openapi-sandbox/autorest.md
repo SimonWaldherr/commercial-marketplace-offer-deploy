@@ -16,4 +16,5 @@ You will notice the Swagger doc UI simultaneously update based on what you input
  # Resources
 OpenAPI:
   [OpenAPI Repository](https://github.com/OAI/OpenAPI-Specification)
+  
   [Video Walkthrough on creating a Swagger Doc](https://www.youtube.com/watch?v=mViFmjcDOoA&t=382s)
