@@ -22,7 +22,7 @@ You will notice the Swagger doc UI simultaneously update based on what you input
 
 ## AutoRest
 
-  [Main Repository](https://github.com/Azure/autorest)
+  [AutoRest Repository](https://github.com/Azure/autorest)
   
   [Generating Clients with AutoRest](https://github.com/Azure/autorest/tree/main/docs/generate)
   
